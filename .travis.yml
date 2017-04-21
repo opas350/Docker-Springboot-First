@@ -1,5 +1,10 @@
+sudo: required
 language: java
 jdk:
         - oraclejdk8
-sudo: false
-script: mvn package
+services:
+        - docker
+
+script: 
+        - mvn package
+        - mvn docker:build
