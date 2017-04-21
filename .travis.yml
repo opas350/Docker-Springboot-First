@@ -13,4 +13,5 @@ before_install:
 script: 
         - mvn package
         - mvn docker:build
+after_sucess:
         - docker push opas350/final-accenture-project
