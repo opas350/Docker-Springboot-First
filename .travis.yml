@@ -6,5 +6,7 @@ services:
         - docker
 
 script: 
+        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
         - mvn package
         - mvn docker:build
+        - docker push opas350/final-accenture-project
