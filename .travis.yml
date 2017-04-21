@@ -4,6 +4,9 @@ jdk:
         - oraclejdk8
 services:
         - docker
+cache:
+        directories:
+                - $HOME/.m2
 script:
         - echo "Testing Docker Hub Credentials"
         - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
